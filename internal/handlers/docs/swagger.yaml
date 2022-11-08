@@ -1,0 +1,544 @@
+basePath: /api
+host: localhost:8080
+info:
+  contact: {}
+  title: Cryptocurrency Bot API documentation
+  version: 0.1.0
+paths:
+  /account/new_account:
+    get:
+      consumes:
+      - application/json
+      description: Create account for new user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Create account
+      tags:
+      - Account
+  /account/percentage_observer/delete:
+    get:
+      consumes:
+      - application/json
+      description: Delete account percentage observers
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Delete percentage observers
+      tags:
+      - Account - Percentage observers
+  /account/percentage_observers/list:
+    get:
+      consumes:
+      - application/json
+      description: View account percentage observers
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: View percentage observers
+      tags:
+      - Account - Percentage observers
+  /account/portfolio/add:
+    get:
+      consumes:
+      - application/json
+      description: Add currency in user portfolio
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Add to portfolio
+      tags:
+      - Account - Portfolio
+  /account/portfolio/delete:
+    get:
+      consumes:
+      - application/json
+      description: Delete currency record in portfolio
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Delete in portfolio
+      tags:
+      - Account - Portfolio
+  /account/portfolio/update:
+    get:
+      consumes:
+      - application/json
+      description: Update currency record in portfolio
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Update in portfolio
+      tags:
+      - Account - Portfolio
+  /account/portfolio/view:
+    get:
+      consumes:
+      - application/json
+      description: View currencies in user portfolio
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: View portfolio
+      tags:
+      - Account - Portfolio
+  /account/price_observers/change:
+    get:
+      consumes:
+      - application/json
+      description: Change account price observers
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Change price observers
+      tags:
+      - Account - Price observers
+  /account/price_observers/delete:
+    get:
+      consumes:
+      - application/json
+      description: Delete account price observers
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Delete price observers
+      tags:
+      - Account - Price observers
+  /account/price_observers/list:
+    get:
+      consumes:
+      - application/json
+      description: View account price observers
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: View price observers
+      tags:
+      - Account - Price observers
+  /account/subscription/view:
+    get:
+      consumes:
+      - application/json
+      description: View data about subscription
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: View subscription
+      tags:
+      - Account - Subscription
+  /info/index_rating:
+    get:
+      consumes:
+      - application/json
+      description: Get data to rating currency
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Currency rating
+      tags:
+      - Info - Rating
+  /info/trending/cmc:
+    get:
+      consumes:
+      - application/json
+      description: Get trending currency from coinmarketplace
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Trending from coinmarketplace
+      tags:
+      - Info - Trending
+  /info/trending/cmc_gainers:
+    get:
+      consumes:
+      - application/json
+      description: Get trending gainers currency from coinmarketplace
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Gainers from coinmarketplace
+      tags:
+      - Info - Trending
+  /info/trending/cmc_losers:
+    get:
+      consumes:
+      - application/json
+      description: Get trending losers currency from coinmarketplace
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Losers from coinmarketplace
+      tags:
+      - Info - Trending
+  /info/trending/cmc_most_visited:
+    get:
+      consumes:
+      - application/json
+      description: Get trending most visited currency from coinmarketplace
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Most visited from coinmarketplace
+      tags:
+      - Info - Trending
+  /info/trending/cmc_recently_added:
+    get:
+      consumes:
+      - application/json
+      description: Get trending recently added currency from coinmarketplace
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Recently added from coinmarketplace
+      tags:
+      - Info - Trending
+  /info/trending/coingecko:
+    get:
+      consumes:
+      - application/json
+      description: Get trending currency from coingecko
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Trending from coingecko
+      tags:
+      - Info - Trending
+  /observers/percentage_observer/create:
+    get:
+      consumes:
+      - application/json
+      description: Create percentage observer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Create percentage observer
+      tags:
+      - Observers
+  /observers/price_observer/create:
+    get:
+      consumes:
+      - application/json
+      description: Create price observer
+      parameters:
+      - description: Telegram User ID
+        in: body
+        name: telegramUserId
+        required: true
+        schema:
+          type: integer
+      - description: Name of cryptocurrency which observe
+        in: body
+        name: CryptoCurrency
+        required: true
+        schema:
+          type: string
+      - description: Name of cryptocurrency to track
+        in: body
+        name: CurrencyOfValue
+        required: true
+        schema:
+          type: string
+      - description: Value that expected
+        in: body
+        name: ExpectedValue
+        required: true
+        schema:
+          type: number
+      - description: Up or down direction
+        in: body
+        name: IsUpDirection
+        required: true
+        schema:
+          type: boolean
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            type: object
+        "404":
+          description: Not Found
+          schema:
+            type: object
+      security:
+      - Bearer: []
+      summary: Create price observer
+      tags:
+      - Observers
+securityDefinitions:
+  Bearer:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
